@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/chat_window_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#c0c0c0"
+        android:fadingEdge="none"
+        android:padding="0.0dip"
+        android:paddingBottom="0.0dip"
+        android:paddingLeft="0.0dip"
+        android:paddingRight="0.0dip"
+        android:paddingTop="0.0dip" >
+
+        <ImageView
+            android:id="@+id/messagegedetail_rov_icon"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_gravity="right"
+            android:layout_marginBottom="dip"
+            android:layout_marginLeft="4dip"
+            android:layout_marginTop="2dip"
+            android:background="@drawable/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="9dip"
+                android:layout_weight="1.0"
+                android:fadingEdge="none"
+                android:gravity="center_vertical|left"
+                android:text="气泡记事"
+                android:textColor="#000000"
+                android:textSize="20dip" />
+
+            <TextView
+                android:id="@+id/proverb"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="9dip"
+                android:layout_weight="1.0"
+                android:fadingEdge="none"
+                android:gravity="center_vertical|left"
+                android:text="追求自己的追求"
+                android:textColor="#FF444444"
+                android:textSize="15dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chat_win_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_window_top"
+        android:layout_weight="1.0"
+        android:fadingEdge="none"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#d3d3d3"
+            android:cacheColorHint="#d3d3d3"
+            android:fadingEdge="none"
+            android:listSelector="#00000000"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:background="#d3d3d3" />
+
+    <LinearLayout
+        android:id="@+id/send_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="#dcdcdc"
+        android:fadingEdge="none"
+        android:orientation="horizontal" >
+
+        <!-- android:background="@drawable/myeditor" -->
+
+        <EditText
+            android:id="@+id/chat_text_editor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="5px"
+            android:layout_weight="1.0"
+            android:fadingEdge="none"
+            android:focusable="true"
+            android:hint="请输入内容"
+            android:maxLength="3000"
+            android:maxLines="5" />
+
+        <Button
+            android:id="@+id/chat_send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center|right"
+            android:background="@drawable/button"
+            android:fadingEdge="none"
+            android:nextFocusLeft="@+id/embedded_text_editor"
+            android:text="保存" />
+    </LinearLayout>
+
+</LinearLayout>
